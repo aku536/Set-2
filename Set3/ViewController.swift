@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var scoreLabel: UILabel! {
         didSet {
             scoreLabel.text = "Score: \(game.score)"
@@ -28,13 +31,20 @@ class ViewController: UIViewController {
     
     private var game = Set()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // start game immediatly when load
+        updateViewFromModel()
+    }
+    
+    // adds 3 more cards on the deck
     @IBAction func dealThreeMoreCards(_ sender: UIButton) {
         game.deal3Cards()
         updateViewFromModel()
     }
     
-    @objc
-    private func reshuffle(_ sender: UIGestureRecognizer) {
+    // shuffles the cards on the deck
+    @objc private func reshuffle(_ sender: UIGestureRecognizer) {
         switch sender.state {
         case .ended:
             game.shuffle()
@@ -49,12 +59,16 @@ class ViewController: UIViewController {
         updateViewFromModel()
     }
     
+    // MARK: Updating views
+    
     private func updateViewFromModel() {
+        // deletes matchedCards
         if deckView.cardViews.count - game.dealtCards.count > 0 {
             let cardsInGame = deckView.cardViews[..<game.dealtCards.count]
             deckView.cardViews = Array(cardsInGame)
         }
         
+        // creates or updates a card view
         for index in game.dealtCards.indices {
             let card = game.dealtCards[index]
             if index > (deckView.cardViews.count - 1) {
@@ -67,10 +81,12 @@ class ViewController: UIViewController {
                 updateCardView(cardView, for: card)
             }
         }
+        // updates outlets' views
         scoreLabel.text = "Score: \(game.score)"
         dealButton.isEnabled = game.allCards.count > 0
     }
     
+    // displays card view or highlights it
     private func updateCardView(_ cardView: SetCardView, for card: PlayingCard) {
         cardView.symbolInt = card.symbols.rawValue
         cardView.colorInt = card.colors.rawValue
@@ -96,6 +112,7 @@ class ViewController: UIViewController {
         cardView.addGestureRecognizer(tap)
     }
     
+    // add/remove a card to/from the selectedCards[]
     @objc private func tapCard(recognizedBy recognizer:UITapGestureRecognizer) {
         switch recognizer.state {
         case .ended:
@@ -106,10 +123,4 @@ class ViewController: UIViewController {
         }
         updateViewFromModel()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateViewFromModel()
-    }
-    
 }

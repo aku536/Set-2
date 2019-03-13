@@ -11,6 +11,8 @@ import Foundation
 struct PlayingCard: Equatable {
     static func == (lhs: PlayingCard, rhs: PlayingCard) -> Bool { return ((lhs.symbols == rhs.symbols) && (lhs.quantity == rhs.quantity) && (lhs.colors == rhs.colors) && (lhs.strokes == rhs.strokes)) }
     
+    
+    // card's properties
     var symbols: Symbol
     var quantity: Quantity
     var colors: Color

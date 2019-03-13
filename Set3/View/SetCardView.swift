@@ -11,11 +11,16 @@ import UIKit
 @IBDesignable
 class SetCardView: UIView {
     
+    // MARK: cardView's properties
+    
     @IBInspectable
     var isSelected: Bool = false { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    
     var isMatched: Bool? { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    
     @IBInspectable
     var isFaceUp: Bool = true { didSet { setNeedsDisplay(); setNeedsLayout() } }
+    
     @IBInspectable
     var faceBackgroundColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) { didSet { setNeedsDisplay()} }
     
@@ -33,6 +38,7 @@ class SetCardView: UIView {
             }
         }
     }
+    
     @IBInspectable
     var colorInt: Int = 1 {
         didSet {
@@ -44,6 +50,7 @@ class SetCardView: UIView {
             }
         }
     }
+    
     @IBInspectable
     var fillInt: Int = 1 {
         didSet {
@@ -60,6 +67,7 @@ class SetCardView: UIView {
     private var fill = Fill.striped  { didSet { setNeedsDisplay(); setNeedsLayout() } }
     private var symbol = Symbol.squiggle  { didSet { setNeedsDisplay(); setNeedsLayout() } }
     
+    // draws a card
     override func draw(_ rect: CGRect) {
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         faceBackgroundColor.setFill()
@@ -73,6 +81,7 @@ class SetCardView: UIView {
         }
     }
     
+    // draws a shape on a card
     private func drawPips() {
         color.setFill()
         color.setStroke()
@@ -97,6 +106,7 @@ class SetCardView: UIView {
         }
     }
     
+    // selects what shape is should be drawn
     private func drawShape(in rect: CGRect) {
         let path: UIBezierPath
         switch symbol {
@@ -114,6 +124,7 @@ class SetCardView: UIView {
         }
     }
     
+    // draws Diamond
     private func pathForDiamond(in rect: CGRect) -> UIBezierPath {
         let diamond = UIBezierPath()
         diamond.move(to: CGPoint(x: rect.minX, y: rect.midY))
@@ -124,6 +135,7 @@ class SetCardView: UIView {
         return diamond
     }
     
+    // draws Oval
     private func pathForOval(in rect: CGRect) -> UIBezierPath {
         let oval = UIBezierPath()
         let radius = rect.height/2
@@ -134,6 +146,7 @@ class SetCardView: UIView {
         return oval
     }
     
+    // draws Squiggle
     private func pathForSquiggle(in rect: CGRect) -> UIBezierPath {
         let upperSquiggle = UIBezierPath()
         let sqdx = rect.width * 0.1
@@ -164,6 +177,7 @@ class SetCardView: UIView {
         return upperSquiggle
     }
     
+    // clips the shape
     private func stripeShape(path: UIBezierPath, in rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         context?.saveGState()
@@ -172,6 +186,7 @@ class SetCardView: UIView {
         context?.restoreGState()
     }
     
+    // draws stripes in shape
     private func stripeRect(_ rect: CGRect) {
         let stripe = UIBezierPath()
         let dashes: [CGFloat] = [1, 4]
@@ -184,6 +199,7 @@ class SetCardView: UIView {
         stripe.stroke()
     }
     
+    // changes the view depending on state
     private func configureState() {
         backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         isOpaque = false
@@ -210,7 +226,7 @@ class SetCardView: UIView {
     }
     
     
-    //constants
+    // constants
     private enum Symbol {
         case oval
         case diamond
