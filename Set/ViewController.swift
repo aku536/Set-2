@@ -68,8 +68,6 @@ class ViewController: UIViewController {
             deckView.cardViews = Array(cardsInGame)
         }
         
-        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: <#T##TimeInterval#>, delay: <#T##TimeInterval#>, options: <#T##UIView.AnimationOptions#>, animations: <#T##() -> Void#>, completion: <#T##((UIViewAnimatingPosition) -> Void)?##((UIViewAnimatingPosition) -> Void)?##(UIViewAnimatingPosition) -> Void#>)
-        
         // creates or updates a card view
         for index in game.dealtCards.indices {
             let card = game.dealtCards[index]
