@@ -25,6 +25,9 @@ struct Set {
         }
     }
     
+    // contains matched cards
+    // when matching replaces matched cards with new ones or
+    // removes them from the deck
     private(set) var matchedCards = [PlayingCard]() {
         didSet {
             for matchedCard in matchedCards {
@@ -80,9 +83,9 @@ struct Set {
         if selectedCards.count > 2 { selectedCards.removeAll() }
         if selectedCards.contains(card) {
             selectedCards.remove(card)
+            score -= 1
         } else {
             selectedCards.append(card)
-            score -= 1
         }
     }
     
@@ -102,6 +105,7 @@ struct Set {
         for _ in 0...2 {
             if let card = takeCard() {
                 dealtCards.append(card)
+                score -= 2
             }
         }
     }
