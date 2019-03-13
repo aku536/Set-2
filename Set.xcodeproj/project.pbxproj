@@ -56,15 +56,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0237E2192238E4CB00342486 /* Controller */ = {
+		0237E2192238E4CB00342486 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				02AB9839222D2BBE00E60701 /* DeckView.swift */,
 				02AB983B222D2F6E00E60701 /* Grid.swift */,
+				0258F83A21F7452C00624638 /* Main.storyboard */,
 				026E8A1C222FA8EE006BB279 /* SetCardView.swift */,
-				0258F83821F7452C00624638 /* ViewController.swift */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
 		0258F82A21F7452C00624638 = {
@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				0258F84821F7455700624638 /* Additional Files */,
-				0237E2192238E4CB00342486 /* Controller */,
+				0237E2192238E4CB00342486 /* View */,
 				0237E2182238E4A200342486 /* Model */,
-				0258F83A21F7452C00624638 /* Main.storyboard */,
+				0258F83821F7452C00624638 /* ViewController.swift */,
 				0258F84221F7452F00624638 /* Info.plist */,
 			);
 			path = Set;
