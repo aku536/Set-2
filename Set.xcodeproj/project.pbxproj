@@ -47,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0237E2182238E4A200342486 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02C74D2B21F7905B00649FCB /* PlayingCard.swift */,
+				02C74D2921F7903A00649FCB /* Set.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0237E2192238E4CB00342486 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02AB9839222D2BBE00E60701 /* DeckView.swift */,
+				02AB983B222D2F6E00E60701 /* Grid.swift */,
+				026E8A1C222FA8EE006BB279 /* SetCardView.swift */,
+				0258F83821F7452C00624638 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		0258F82A21F7452C00624638 = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				0258F84821F7455700624638 /* Additional Files */,
-				0258F83821F7452C00624638 /* ViewController.swift */,
-				02AB983B222D2F6E00E60701 /* Grid.swift */,
-				02AB9839222D2BBE00E60701 /* DeckView.swift */,
+				0237E2192238E4CB00342486 /* Controller */,
+				0237E2182238E4A200342486 /* Model */,
 				0258F83A21F7452C00624638 /* Main.storyboard */,
-				02C74D2921F7903A00649FCB /* Set.swift */,
-				02C74D2B21F7905B00649FCB /* PlayingCard.swift */,
 				0258F84221F7452F00624638 /* Info.plist */,
-				026E8A1C222FA8EE006BB279 /* SetCardView.swift */,
 			);
 			path = Set;
 			sourceTree = "<group>";
