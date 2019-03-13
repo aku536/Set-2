@@ -68,7 +68,7 @@
 		0258F82A21F7452C00624638 = {
 			isa = PBXGroup;
 			children = (
-				0258F83521F7452C00624638 /* Set3 */,
+				0258F83521F7452C00624638 /* Set */,
 				0258F83421F7452C00624638 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0258F83521F7452C00624638 /* Set3 */ = {
+		0258F83521F7452C00624638 /* Set */ = {
 			isa = PBXGroup;
 			children = (
 				0258F84821F7455700624638 /* Additional Files */,
@@ -90,7 +90,7 @@
 				0258F83821F7452C00624638 /* ViewController.swift */,
 				0258F84221F7452F00624638 /* Info.plist */,
 			);
-			path = Set3;
+			path = Set;
 			sourceTree = "<group>";
 		};
 		0258F84821F7455700624638 /* Additional Files */ = {

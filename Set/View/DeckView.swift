@@ -27,6 +27,7 @@ class DeckView: UIView {
         }
     }
     
+    // creates a card view and places it in a proper way
     override func layoutSubviews() {
         super.layoutSubviews()
         var grid = Grid(layout: Grid.Layout.aspectRatio(Constants.cellAspectRatio), frame: bounds)
@@ -34,7 +35,11 @@ class DeckView: UIView {
         for row in 0..<grid.dimensions.rowCount {
             for column in 0..<grid.dimensions.columnCount {
                 if cardViews.count > (row * grid.dimensions.columnCount + column) {
-                    cardViews[row * grid.dimensions.columnCount + column].frame = grid[row, column]!.insetBy(dx: Constants.spacingX, dy: Constants.spacingY)
+                    UIViewPropertyAnimator.runningPropertyAnimator(
+                        withDuration: 0.5, delay: 0,
+                        options: [],
+                        animations: { self.cardViews[row * grid.dimensions.columnCount + column].frame = grid[row, column]!.insetBy(dx: Constants.spacingX, dy: Constants.spacingY) })
+                    
                 }
             }
         }
