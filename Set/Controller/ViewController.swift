@@ -107,4 +107,9 @@ class ViewController: UIViewController {
         updateViewFromModel()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViewFromModel()
+    }
+    
 }
