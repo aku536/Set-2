@@ -12,7 +12,6 @@
 		0258F83C21F7452C00624638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0258F83A21F7452C00624638 /* Main.storyboard */; };
 		0258F83E21F7452F00624638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0258F83D21F7452F00624638 /* Assets.xcassets */; };
 		0258F84121F7452F00624638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0258F83F21F7452F00624638 /* LaunchScreen.storyboard */; };
-		0258F84A21F7459100624638 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0258F84921F7459100624638 /* Default-568h@2x.png */; };
 		026E8A1D222FA8EE006BB279 /* SetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E8A1C222FA8EE006BB279 /* SetCardView.swift */; };
 		02AB983A222D2BBE00E60701 /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9839222D2BBE00E60701 /* DeckView.swift */; };
 		02AB983C222D2F6E00E60701 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB983B222D2F6E00E60701 /* Grid.swift */; };
@@ -21,14 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0258F83321F7452C00624638 /* Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0258F83321F7452C00624638 /* Set3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0258F83621F7452C00624638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0258F83821F7452C00624638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0258F83B21F7452C00624638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0258F83D21F7452F00624638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0258F84021F7452F00624638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0258F84221F7452F00624638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0258F84921F7459100624638 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		026E8A1C222FA8EE006BB279 /* SetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardView.swift; sourceTree = "<group>"; };
 		02AB9839222D2BBE00E60701 /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 		02AB983B222D2F6E00E60701 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -70,8 +68,7 @@
 		0258F82A21F7452C00624638 = {
 			isa = PBXGroup;
 			children = (
-				0258F84921F7459100624638 /* Default-568h@2x.png */,
-				0258F83521F7452C00624638 /* Set */,
+				0258F83521F7452C00624638 /* Set3 */,
 				0258F83421F7452C00624638 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,12 +76,12 @@
 		0258F83421F7452C00624638 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0258F83321F7452C00624638 /* Set.app */,
+				0258F83321F7452C00624638 /* Set3.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0258F83521F7452C00624638 /* Set */ = {
+		0258F83521F7452C00624638 /* Set3 */ = {
 			isa = PBXGroup;
 			children = (
 				0258F84821F7455700624638 /* Additional Files */,
@@ -93,7 +90,7 @@
 				0258F83821F7452C00624638 /* ViewController.swift */,
 				0258F84221F7452F00624638 /* Info.plist */,
 			);
-			path = Set;
+			path = Set3;
 			sourceTree = "<group>";
 		};
 		0258F84821F7455700624638 /* Additional Files */ = {
@@ -109,9 +106,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0258F83221F7452C00624638 /* Set */ = {
+		0258F83221F7452C00624638 /* Set3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0258F84521F7452F00624638 /* Build configuration list for PBXNativeTarget "Set" */;
+			buildConfigurationList = 0258F84521F7452F00624638 /* Build configuration list for PBXNativeTarget "Set3" */;
 			buildPhases = (
 				0258F82F21F7452C00624638 /* Sources */,
 				0258F83021F7452C00624638 /* Frameworks */,
@@ -121,9 +118,9 @@
 			);
 			dependencies = (
 			);
-			name = Set;
+			name = Set3;
 			productName = Set;
-			productReference = 0258F83321F7452C00624638 /* Set.app */;
+			productReference = 0258F83321F7452C00624638 /* Set3.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0258F82E21F7452C00624638 /* Build configuration list for PBXProject "Set" */;
+			buildConfigurationList = 0258F82E21F7452C00624638 /* Build configuration list for PBXProject "Set3" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0258F83221F7452C00624638 /* Set */,
+				0258F83221F7452C00624638 /* Set3 */,
 			);
 		};
 /* End PBXProject section */
@@ -165,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0258F84121F7452F00624638 /* LaunchScreen.storyboard in Resources */,
-				0258F84A21F7459100624638 /* Default-568h@2x.png in Resources */,
 				0258F83E21F7452F00624638 /* Assets.xcassets in Resources */,
 				0258F83C21F7452C00624638 /* Main.storyboard in Resources */,
 			);
@@ -365,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0258F82E21F7452C00624638 /* Build configuration list for PBXProject "Set" */ = {
+		0258F82E21F7452C00624638 /* Build configuration list for PBXProject "Set3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0258F84321F7452F00624638 /* Debug */,
@@ -374,7 +370,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0258F84521F7452F00624638 /* Build configuration list for PBXNativeTarget "Set" */ = {
+		0258F84521F7452F00624638 /* Build configuration list for PBXNativeTarget "Set3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0258F84621F7452F00624638 /* Debug */,
